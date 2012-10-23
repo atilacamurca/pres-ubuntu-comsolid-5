@@ -97,7 +97,7 @@ gosta de fazer suas próprias customizações.
 
 \medskip
 
-Ainda assim existem customizações de sucesso sobre o Slackware como o Slax [site].
+Ainda assim existem customizações de sucesso sobre o Slackware como o Slax - \url{http://www.slax.org/}.
 
 \end{frame}
 
@@ -111,16 +111,22 @@ Ainda assim existem customizações de sucesso sobre o Slackware como o Slax [si
 
 \begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
 
-A ferramenta utilizada para a customização do Ubuntu COMSOLiD 5 foi o Customizer [site].
+A ferramenta utilizada para a customização do Ubuntu COMSOLiD 5 foi o Customizer -
+\url{https://github.com/fluxer/Customizer}.
 
-% TODO: falar um pouco sobre a ferramenta ...
+\medskip
+
+Veja dicas de instalação, guia do usuário, screencasts na wiki do projeto -
+\url{https://github.com/fluxer/Customizer/wiki}
+
+\medskip
 
 Outras ferramentas de customização são:
 
 \begin{itemize}
-	\item RemasterSys [site]
-	\item UCK (Ubuntu Customization Kit) [site]
-	\item Ubuntu-Builder [site]
+	\item RemasterSys - \url{http://www.remastersys.com/ubuntu.html}
+	\item UCK - \url{http://uck.sourceforge.net}
+	\item Ubuntu-Builder - \url{http://code.google.com/p/ubuntu-builder}
 \end{itemize}
 
 \end{frame}
@@ -137,7 +143,7 @@ Virtualizar significa a grosso modo, rodar um sistema operacional dentro de outr
 
 \medskip
 
-Uma ótima opção é o VMWare Player [site].
+Uma ótima opção é o VMware Player - \url{http://www.vmware.com/products/player}.
 
 \end{frame}
 
@@ -165,8 +171,7 @@ ou ambiente. Para listar todos os \texttt{schemas} faça:
 Após achar o \texttt{schema} desejado precisamos listar as \texttt{keys}. Para isso faça:
 
 \begin{block}{Listar keys}
-% TODO: colocar schema válido
-\texttt{\$ gsettings list-keys org.gnome.shell | less}
+\texttt{\$ gsettings list-keys org.gnome.desktop.interface | less}
 \end{block}
 
 \medskip
@@ -174,8 +179,7 @@ Após achar o \texttt{schema} desejado precisamos listar as \texttt{keys}. Para 
 Podemos agora listar o valor de cada \texttt{key} individualmente usando o comando:
 
 \begin{block}{Listar valor}
-% TODO: colocar key válida
-\texttt{\$ gsettings get org.gnome.shell icon-theme}
+\texttt{\$ gsettings get org.gnome.desktop.interface icon-theme}
 \end{block}
 
 \end{frame}
@@ -185,8 +189,7 @@ Podemos agora listar o valor de cada \texttt{key} individualmente usando o coman
 Para modificar o valor de uma \texttt{key} utilizamos o comando:
 
 \begin{block}{Listar valor}
-% TODO: colocar key válida
-\texttt{\$ gsettings set org.gnome.shell icon-theme 'Faenza-Dark'}
+\texttt{\$ gsettings set org.gnome.desktop.interface icon-theme 'Faenza-Dark'}
 \end{block}
 
 \medskip
@@ -245,8 +248,16 @@ a comunicação entre os mesmos.
 
 \medskip
 
-Possui suporte a extensões [site] e temas [site]. O projeto encontra-se em constante
-atualização, melhorando a usabilidade cada vez mais.
+Veja mais em \url{http://www.gnome.org/}
+
+\medskip
+
+Possui suporte a extensões (\url{https://extensions.gnome.org/}) e temas.
+O projeto encontra-se em constante atualização, melhorando a usabilidade cada vez mais.
+
+\medskip
+
+Veja um trecho do código \url{http://git.gnome.org/browse/gnome-shell/tree/src/main.c}
 
 \end{frame}
 
