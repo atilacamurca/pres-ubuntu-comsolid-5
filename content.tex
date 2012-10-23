@@ -1,0 +1,319 @@
+%
+% Átila Camurça <camurca.home@gmail.com>, 2012
+%
+\section{Introdução}
+
+\begin{frame}
+
+\slidetitle{Introdução}
+
+\end{frame}
+
+\subsection{Ubuntu COMSOLiD 5}
+
+\begin{frame}
+
+\slidesubtitle{Ubuntu COMSOLiD 5}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ubuntu COMSOLiD 5}\framesubtitle{Introdução}
+
+O Ubuntu COMSOLiD 5 tem como base o Ubuntu versão 12.04.1 LTS.
+Isso significa que ele terá um suporte maior que o usual de 6 meses.
+
+\bigskip
+
+\begin{exampleblock}{LTS}
+Long Term Support (Termo de Suporte a Longo Prazo)
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ubuntu COMSOLiD}\framesubtitle{Introdução}
+Na versão Ubuntu COMSOLiD nós mantemos o Ubuntu Original e somente adicionamos
+mais funcionalidades a ele. Além do Unity, você pode escolher o GNOME 3 como
+ambiente de trabalho.
+
+\medskip
+
+Esse tipo de modificação é bastante comum no mundo Linux. É o que chamamos
+de customização, ou seja, adaptar o Linux as suas necessidades.
+
+\end{frame}
+
+\subsection{Customização}
+
+\begin{frame}
+
+\slidesubtitle{Customização}
+
+\end{frame}
+
+\begin{frame}\frametitle{Customização}\framesubtitle{Introdução}
+
+Customizar o Linux é o jeito de possuir uma distribuição que atenda as suas necessidades de forma específica.
+Diferente de uma distribuição normal, onde o objetivo é um ambiente que atenda as necessidades da maioria.
+
+\medskip
+
+Existem várias distribuições derivadas do Ubuntu, entre elas estão:
+\begin{itemize}
+	\item Ubuntu Studio (cria um ambiente multimídia)
+	\item JoliCloud (Netbook)
+	\item Linux Mint
+\end{itemize}
+
+\end{frame}
+
+\section{Customização, por onde começar?}
+
+\begin{frame}
+
+\slidetitle{Customização, por onde começar?}
+
+\end{frame}
+
+\subsection{Ambiente de customização}
+
+\begin{frame}
+
+\slidesubtitle{Ambiente de customização}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ambiente de customização}\framesubtitle{Customização, por onde começar?}
+
+A escolha do ambiente irá determinar o grau de dificuldade e o público atingido.
+
+\medskip
+
+Escolher o Ubuntu como ambiente de customização é mais fácil e atingi um público grande.
+
+\medskip
+
+Escolher o Slackware por outro lado, pode ser mais complicado e o público que o utiliza
+gosta de fazer suas próprias customizações.
+
+\medskip
+
+Ainda assim existem customizações de sucesso sobre o Slackware como o Slax [site].
+
+\end{frame}
+
+\subsection{Ferramentas de customização}
+
+\begin{frame}
+
+\slidesubtitle{Ferramentas de customização}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
+
+A ferramenta utilizada para a customização do Ubuntu COMSOLiD 5 foi o Customizer [site].
+
+% TODO: falar um pouco sobre a ferramenta ...
+
+Outras ferramentas de customização são:
+
+\begin{itemize}
+	\item RemasterSys [site]
+	\item UCK (Ubuntu Customization Kit) [site]
+	\item Ubuntu-Builder [site]
+\end{itemize}
+
+\end{frame}
+
+% TODO: mostrar screenshot do Customizer
+
+\begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
+
+Outra ferramenta importante para realizar testes com sua customização é um ambiente de virtualização.
+
+\medskip
+
+Virtualizar significa a grosso modo, rodar um sistema operacional dentro de outro.
+
+\medskip
+
+Uma ótima opção é o VMWare Player [site].
+
+\end{frame}
+
+\begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
+
+Para a customização do Ubuntu 12.04 é necessário conhecer o aplicativo \texttt{gsettings}.
+
+\begin{block}{Exemplo de uso}
+\texttt{\$ gsettings get foo bar}
+\end{block}
+
+\medskip
+
+O \texttt{gsettings} trabalha com \texttt{schemas}, que são um conjunto de regras que regem um programa,
+ou ambiente. Para listar todos os \texttt{schemas} faça:
+
+\begin{block}{Listar schemas}
+\texttt{\$ gsettings list-schemas | less}
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
+
+Após achar o \texttt{schema} desejado precisamos listar as \texttt{keys}. Para isso faça:
+
+\begin{block}{Listar keys}
+% TODO: colocar schema válido
+\texttt{\$ gsettings list-keys org.gnome.shell | less}
+\end{block}
+
+\medskip
+
+Podemos agora listar o valor de cada \texttt{key} individualmente usando o comando:
+
+\begin{block}{Listar valor}
+% TODO: colocar key válida
+\texttt{\$ gsettings get org.gnome.shell icon-theme}
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Ferramentas de customização}\framesubtitle{Customização, por onde começar?}
+
+Para modificar o valor de uma \texttt{key} utilizamos o comando:
+
+\begin{block}{Listar valor}
+% TODO: colocar key válida
+\texttt{\$ gsettings set org.gnome.shell icon-theme 'Faenza-Dark'}
+\end{block}
+
+\medskip
+
+% TODO: exemplificar melhor o conceito de string, boolean e integer
+Os valores de uma \texttt{key} podem ser:
+\begin{itemize}
+	\item string
+	\item boolean [\texttt{true|false}]
+	\item integer [0-9]
+	\item array
+\end{itemize}
+
+\end{frame}
+
+\section{Ambiente de trabalho}
+
+\begin{frame}
+
+\slidetitle{Ambiente de trabalho}
+
+\end{frame}
+
+
+\subsection{Unity}
+
+\begin{frame}
+
+\slidesubtitle{Unity}
+
+\end{frame}
+
+\begin{frame}\frametitle{Unity}\framesubtitle{Ambiente de trabalho}
+
+Caracteriza-se por uma barra lateral contendo o menu principal e atalhos para os aplicativos
+mais utilizados.
+
+\medskip
+
+É o ambiente padrão do Ubuntu desde o 11.04, e vem sofrendo atualizações desde então.
+
+\end{frame}
+
+\subsection{GNOME 3}
+
+\begin{frame}
+
+\slidesubtitle{GNOME 3}
+
+\end{frame}
+
+\begin{frame}\frametitle{GNOME 3}\framesubtitle{Ambiente de trabalho}
+
+A ideia é simplificar a interface e a integrar aos aplicativos, tornando mais direta
+a comunicação entre os mesmos.
+
+\medskip
+
+Possui suporte a extensões [site] e temas [site]. O projeto encontra-se em constante
+atualização, melhorando a usabilidade cada vez mais.
+
+\end{frame}
+
+\section{Aplicativos}
+
+\begin{frame}
+
+\slidetitle{Aplicativos}
+
+\end{frame}
+
+\subsection{Multimídia}
+
+\begin{frame}
+
+\slidesubtitle{Multimídia}
+
+\end{frame}
+
+\begin{frame}\frametitle{Multimídia}\framesubtitle{Aplicativos}
+
+Para apresentar as ferramentas multimídia, vamos montar um cenário real de como
+seria criar um DVD de clipes no Ubuntu COMSOLiD 5.
+
+Ferramentas necessárias:
+\begin{itemize}
+	\item Editor de Legendas Gaupol
+	\item Criador de Vídeo DVD/CD DeVeDe
+	\item Reprodutor de Mídias VLC
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Take The Time}\framesubtitle{Dream Theater - Images And Words [1992]}
+
+\begin{quote}
+"... I need a new {\Large voice}, a new {\Large law}, a {\LARGE new way}\\
+Take the time, reevaluate\\
+It's time to {\LARGE pick up the pieces},\\
+go back to {\large square one}\\
+I think it's {\huge time for a change} ..."
+\end{quote}
+
+% tradução
+\begin{quote}
+"... Eu preciso de uma nova voz, uma nova lei, um novo caminho\\
+Aproveite o tempo, reavalie\\
+É hora de apanhar os pedaços,\\
+Voltar ao começo\\
+Eu acho que é hora de uma mudança ..."
+\end{quote}
+
+\end{frame}
+
+\begin{frame}\frametitle{Multimídia}
+Continuando a saga da seção Multimídia, vamos a outro cenário: Extrair e converter
+arquivos de um CD de áudio para outros formatos.
+
+Ferramentas utilizadas:
+\begin{itemize}
+	\item Extrator de CDs de áudio SoundJuicer
+	\item Conversor de Som SoundConverter
+	\item Ferramenta para Etiquetar Áudio AudioTagTool
+\end{itemize}
+
+\end{frame}
+
+
+
+
